@@ -1,2 +1,2 @@
 # DBMS-Mini-Project
-Every edit to the file has to be uploaded back to the repository.
+Every edited file has to be uploaded back to the repository.
