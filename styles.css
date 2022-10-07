@@ -1,94 +1,45 @@
-.branches {
-  display: inline-block;
-  width: 240px;
-  height: 350px;
-  margin: 25px;
-  transition: 0.5s ;
-  border-width:  3px ;
+* {
+    box-sizing: border-box;
 }
 
-.branches:hover {
-    cursor: pointer;
-    transform: scale(1.08);
+html {
+    scroll-behavior: smooth;
 }
 
-
-
-.branchfirst {
-  display: inline-block;
-  width: 240px;
-  height: 350px;
-  margin: 25px;
-  margin-left: 70px;
-  transition: 0.5s ;
+header {
+    padding: 0px;
+    text-align: center;
+    background-color: #DFF6FF;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.branchimg {
-  margin: 0 auto 0 auto;
-  height: 100% ;
-  width: 100% ;
-  object-fit: contain ;
-  border-top-left-radius:  20px ;
-  border-top-right-radius:  20px ;
-  border-width:  3px ;
-  text-decoration: none ;
+header nav > a {
+    font-size: 24px;
+    margin: 16px;
+    margin-left: 36px;
+    text-decoration: none;
+    color: #47B5FF;
 }
 
-a{
-    text-decoration: none ;
+header nav > a:hover {
+    text-decoration: underline;
 }
 
-.lowerblock {
-  display: inline-block;
-  height : 50px ;
-  width: 240px ;
-  background-color: #DFF6FF ;
-  position: relative;
-  text-align: center;
-  border-bottom-left-radius: 20px ;
-  border-bottom-right-radius: 20px ;
-  border-width:  3px ;
+header nav > a:visited {
+    color: #3390ce;
 }
 
-.Upperblock {
-  height: 300px;
-  width: 240px ;
-  bottom : 50px ;
-  border-radius: 20px ;
+img {
+    border-radius: 50%;
 }
 
-.hotelCityName {
-  display: inline-block;
-  text-align: center;
-  margin-top: 10px ;
-  margin-bottom: 10px;
-  color : #06283D;
+.logo {
+    bottom: 0px;
 }
 
-.branchesouter {
-  margin : 0 20px 0 40px ;
-  display  : inline-block;
-  width : auto;
-  height : auto;
-}
-
-.mainouterbranches {
-  margin : 60px 8px 60px 4px  ;
-  display  : inline-block;
-  width : auto;
-  height : auto;
-}
-
-hr {
-  border-style: none ;
-  border-top-style: dotted ;
-  border-color: #47B5FF;
-  border-width: 7px;
-  width: 7%;
-}
-
-h1 {
-text-align: center;
-text-shadow: 1px 1px #79DAE8 ;
-color : #256D85 ;
+a {
+    display: inline-block;
+    position: relative;
+    bottom: 27px;
 }
