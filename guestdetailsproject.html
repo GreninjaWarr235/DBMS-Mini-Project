@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveller+Booking Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2><pre>Guest Details</pre></h2>
+    <div class="container">
+        
+            <div class="item">
+            <span>
+                <pre>                Title*</pre>
+                    <select class="title" name="pos">
+                        <option value="Mr." id="1">Mr.</option>
+                        <option value="Ms." id="2">Ms.</option>
+                        <option value="Mrs." id="3">Mrs.</option>
+                        <option value="Dr." id="4">Dr</option>
+                        <option value="Prof." id="5">Prof.</option>  
+                    </select>
+                </span>
+        </div>
+        <div class="item">
+            <pre>First Name</pre>
+            <pre class="fn"><input  type="text"  name="info"></pre>
+        </div>
+    <div class="item">
+        <pre>Last Name*</pre>
+        <pre class="ln"><input  type="text"  name="info"></pre>
+    </div>
+        
+        
+    <div class="email" class="item">
+        <pre>Email*</pre>
+        <input type="text" placeholder="abc@gmail.com"  name="info">
+    </div>
+    <div class="item">
+        <pre>           Country*</pre>
+    <select class="ext" name="country">
+        <pre><option value="India" id="1">India (+91)</option></pre>
+    </select>
+    </div>
+    <div class="item">
+        <pre>Phone Number*</pre>
+    <input type="tel" placeholder="123-45-678" name="contactno">
+    </div>
+    <br>
+    <div class="item">
+        <pre>Membership Number</pre>
+    <input type="tel"  name="membershipno">
+    </div>
+    <div class="item">
+        <pre>GST Number</pre>
+    <input type="tel"  name="gstno">
+    </div>
+    <br>
+    <div class="item">
+        <pre>Special Requests</pre>
+        <textarea name="Special" id="1" " rows="5"></textarea>
+    </div>
+    <br><br>
+    
+    <div class="item">
+        <label for="a">
+        <input type="checkbox" value="a" name="policy" id="1"> I have read and understood the Privacy Policy.*
+        </label>
+        <br>
+        <label for="b">
+            <input type="checkbox" value="b" name="policy" id="2"> I have read and agree to the Terms & Conditions.*
+            </label>
+        <br><br>
+    </div>
+    </div>
+    <p>* All fields mandatory</p>
+    <input type="submit" value="submit">
+</body>
+</html>
