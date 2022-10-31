@@ -1,0 +1,56 @@
+.container {
+    width: 700px;
+}
+
+.item {
+    display: inline-block;
+    width: 180px;
+    height: 75px;
+}
+
+.ext {
+    margin-left: 80px;
+}
+
+.title {
+    margin-left: 80px;
+}
+
+.email {
+    margin-left: 80px;
+}
+
+.fn {
+    margin-right: 40px;
+}
+
+.ln {
+    margin-right: 40px;
+}
+.box {
+    background-color: white;
+    width: 300px;
+    border: 1px solid black;
+    padding: 120px;
+    padding-right: -20px;
+    margin-right: 20px;
+    margin: 80px;
+  }
+
+#res:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.container {
+    background-color: lightblue;
+    width: 800px;
+    border: 1px solid black;
+    padding: 0px;
+    padding-right: -20px;
+    margin-right: 20px;
+    margin: 80px;
+
+}
+
+
