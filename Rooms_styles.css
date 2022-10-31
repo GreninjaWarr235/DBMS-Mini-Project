@@ -1,0 +1,171 @@
+.OuterDiv {
+  height: 1500px ;
+  width : 1050px ;
+  margin  : auto ;
+}
+
+.mainhr {
+  border-style: none ;
+  border-top-style: dotted ;
+  border-color: #47B5FF;
+  border-width: 7px;
+  width: 7%;
+}
+
+#Heading {
+  text-align: center;
+  text-shadow: 1px 1px #79DAE8 ;
+  color : #256D85 ;
+}
+
+.roomDiv {
+  height: 250px ;
+  margin: 20px 0 20px 0 ;
+  background-color: #E8F9FD ;
+  border  : 4px solid #256D85 ;
+}
+
+/* Image Section */
+.roomDiv_img {
+  display: inline-block;
+  height: 250px ;
+  width: 300px ;
+}
+
+.roomimg {
+  position: absolute;
+  height: auto ;
+  width: auto ;
+}
+
+
+/* Description Section */
+.roomDiv_desc {
+  display: inline-block;
+  height: 250px ;
+  width: 492px ;
+  vertical-align: top;
+}
+
+.room_title {
+  display: inline-block;
+
+  height :60px ;
+  width: 482px ;
+}
+
+.title {
+  display: inline-block;
+  margin-left: 20px ;
+}
+
+.hello {
+  display: inline-block;
+  width: 3px;
+}
+
+.roomdesc {
+    display: inline-block;
+    height : 110px ;
+    width  :482px ;
+    position: absolute;
+    l : 30px ;
+}
+
+.room_am {
+  display: inline-block;
+
+    height : 50px ;
+    width  : 482px ;
+}
+
+.review {
+  display : inline-block;
+  margin-top : 15px ;
+}
+
+
+/* End Section */
+.roomDiv_end {
+  display: inline-block;
+  height: 250px ;
+  width: 240px ;
+  position: relative;
+}
+
+a {
+  position: relative;
+  display: inline-block;
+  padding: 20px ;
+  text-decoration: none ;
+  text-transform: uppercase;
+  letter-spacing: 2px ;
+  font-size: 16px ;
+}
+
+a {
+  color: orange ;
+}
+
+a {
+  background: #262c37 ;
+}
+
+a:hover {
+  color:  white ;
+}
+
+a span {
+  display: block ;
+  position: absolute;
+  background: #2894ff;
+}
+
+ a span :nth-child(1) {
+  left: 0 ;
+  bottom: 0 ;
+  width: 1px ;
+  height: 100% ;
+  transform: scaleY(0);
+  transform-origin: top ;
+  transition: transform 0.5s ;
+}
+
+ a :hover  span :nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom ;
+  transition: transform 0.5s ;
+}
+
+.button {
+  position: absolute;
+  bottom: 30px ;
+  right: 40px ;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 70px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+}
+
+
+.pricediv {
+  display: inline-block;
+  height: 70px ;
+  width: 100px ;
+  position: absolute;
+  bottom : 80px ;
+  left : 110px ;
+  background-color: red;
+}
+
+.price {
+  display: inline-block;
+}
