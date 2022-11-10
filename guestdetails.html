@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traveller + Booking Details</title>
+    <link rel="stylesheet" href="guestdetails.css">
+</head>
+
+<body>
+    <h2>
+        <pre class="guestdetails">Guest Details</pre>
+    </h2>
+    <div id="container">
+        <div class="item">
+            <span>
+                <pre class="titleheading">Title*</pre>
+                <select class="title" name="pos">
+                    <option value="Mr." id="1">Mr.</option>
+                    <option value="Ms." id="2">Ms.</option>
+                    <option value="Mrs." id="3">Mrs.</option>
+                    <option value="Dr." id="4">Dr</option>
+                    <option value="Prof." id="5">Prof.</option>
+                </select>
+            </span>
+        </div>
+        <div class="item">
+            <pre class="fnheading">First Name*</pre>
+            <pre class="fn"><input type="text" name="info"></pre>
+        </div>
+        <div class="item">
+            <pre class="lnheading">Last Name*</pre>
+            <pre class="ln"><input type="text" name="info"></pre>
+        </div>
+        <div class="email" class="item">
+            <br>
+            <pre class="emailheading">Email*</pre>
+            <input type="text" placeholder="abc@gmail.com" name="info">
+        </div>
+        <br>
+        <div class="item">
+            <pre class="titleheading">Country*</pre>
+            <select class="title" name="country">
+                <pre><option value="India" id="1">India (+91)</option></pre>
+            </select>
+        </div>
+        <div class="item">
+            <pre class="phoneheading">Phone Number*</pre>
+            <input class="phone" type="tel" placeholder="123456789" name="contactno">
+        </div>
+        <br><br>
+        <div class="item">
+            <pre class="titleheading">Membership Number</pre>
+            <pre><input class="title" type="tel" name="membershipno"></pre>
+        </div>
+        <div class="item">
+            <pre class="gsthead">GST Number</pre>
+            <pre><input class="gstnum" type="tel" name="gstno"></pre>
+        </div>
+        <br><br>
+        <div class="item">
+            <pre class="titleheading"><strong>Special Requests</strong></pre>
+            <pre><textarea class="title" name="Special" id="1" rows="5"></textarea></pre>
+        </div>
+        <br><br>
+        <div class="check">
+            <label for="a">
+                <pre><input type="checkbox" value="a" name="policy" id="1"> I have read and understood the Privacy Policy.*</pre>
+            </label>
+            <label for="b">
+                <pre><input type="checkbox" value="b" name="policy" id="2"> I have read and agree to the Terms & Conditions.*</pre>
+            </label>
+            <pre><p class="dec"> * All fields mandatory</p></pre>
+        </div>
+        <div class="asmButt"><a href="#"><span></span><span></span><span></span><span></span>Submit</a></div>
+    </div>
+    </div>
+</body>
+
+</html>

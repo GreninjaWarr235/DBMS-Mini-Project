@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  box-sizing: border-box;
+  position: sticky;
+  text-align: center;
+  background-color: #d5eefc;
+  font-size: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  z-index: 2;
+}
+
+header img {
+  border-radius: 50%;
+}
+
+.logo {
+  margin: 12px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  transition: 0.5s;
+}
+
+.logo:hover {
+  transform: scale(1.075);
+}
+
+header nav>a {
+  font-size: 19px;
+  text-decoration: none;
+  color: #47b5ff;
+}
+
+header nav>a:last-child {
+  margin-right: revert;
+}
+
+header nav>a:hover {
+  text-decoration: underline;
+}
+
+header nav>a:visited {
+  color: #3390ce;
+}
+
+header a {
+  align-items: center;
+  margin: 12px;
+  margin-left: 40px;
+  display: inline-block;
+  position: relative;
+  bottom: 0px;
+}
+
+.asmButt {
+  display: inline-block;
+}
+
+.asmButt a {
+  position: relative;
+  padding: 8px;
+  padding-top: 7px;
+  padding-bottom: 9px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  background: #0f4c75;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.asmButt a:hover {
+  color: white;
+}
+
+.asmButt a span {
+  display: block;
+  position: absolute;
+  background: #2894ff;
+}
+
+.asmButt a span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.asmButt a:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.asmButt a span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.asmButt a:hover span:nth-child(2) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.asmButt a span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.asmButt a:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.asmButt a span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.asmButt a:hover span:nth-child(4) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.OuterDiv {
+  height: 1500px;
+  width: 1050px;
+  margin: auto;
+  padding: 10px;
+}
+
+.mainhr {
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #98cdeb;
+  border-width: 7px;
+  width: 7%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+#Heading {
+  color: hsl(203, 86%, 29%);
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.roomDiv {
+  height: 250px;
+  margin: 20px 0 20px 0;
+  background-color: #e8f9fd;
+  border: 4px solid #256d85;
+}
+
+/* Image Section */
+.roomDiv_img {
+  display: inline-block;
+  height: 250px;
+  width: 300px;
+}
+
+.roomimg {
+  position: absolute;
+  height: 250px;
+  width: 300px;
+}
+
+/* Description Section */
+.roomDiv_desc {
+  display: inline-block;
+  height: 250px;
+  width: 492px;
+  vertical-align: top;
+  position: relative;
+}
+
+.room_title {
+  display: inline-block;
+
+  height: 60px;
+  width: 482px;
+}
+
+.title {
+  display: inline-block;
+  padding-top: 20px;
+  margin-left: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.hello {
+  display: inline-block;
+  width: 3px;
+}
+
+.roomdesc {
+  display: inline-block;
+  height: 130px;
+  width: 482px;
+  position: absolute;
+  left: 24px;
+  top: 70px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  border-bottom: 10px;
+  border-top: 2px ridge #256d85;
+  padding-top: 20px;
+}
+
+.room_am {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  height: 50px;
+  width: 482px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.review {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+/* End Section */
+.roomDiv_end {
+  display: inline-block;
+  height: 250px;
+  width: 240px;
+  position: relative;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button {
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
+  border-radius: 4px;
+  background-color: #06283d;
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 22px;
+  padding: 20px;
+  width: 70px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.price {
+  display: inline-block;
+  height: 20px;
+  width: 50px;
+  position: absolute;
+  top: 70px;
+  right: 74px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.h31000 {
+  margin-left: -7px;
+}
+
+.otherprices {
+  margin-left: -2px;
+}
+
+footer {
+  justify-content: center;
+  background-color: #dff6ff;
+  width: 100%;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: 5px;
+  padding-bottom: 14px;
+  font-size: 18px;
+  color: hsl(195, 82%, 13%);
+}
+
+footer p {
+  font-size: 15px;
+  padding: 8px;
+  padding-bottom: 21px;
+}
+
+footer a {
+  margin-right: 40px;
+}
+
+footer img {
+  transition: 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.3);
+}
+
+footer a:last-child {
+  margin-right: revert;
+}
+
+.facebook {
+  padding-bottom: 4px;
+}
+
+.youtube {
+  padding-bottom: 2px;
+}
+
+.instagram {
+  padding-bottom: -1px;
+}
