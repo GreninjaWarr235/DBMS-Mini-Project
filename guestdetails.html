@@ -13,72 +13,72 @@
     <h2>
         <pre class="guestdetails">Guest Details</pre>
     </h2>
-    
+
     <div id="container">
         <form action="guestdetails.php" method="post">
-        <div class="item">
-            <span>
-                <pre class="titleheading">Title*</pre>
-                <select class="title" name="title">
-                    <option value="Mr." id="1">Mr.</option>
-                    <option value="Ms." id="2">Ms.</option>
-                    <option value="Mrs." id="3">Mrs.</option>
-                    <option value="Dr." id="4">Dr</option>
-                    <option value="Prof." id="5">Prof.</option>
-                </select>
-            </span>
-        </div>
-        <div class="item">
-            <pre class="fnheading">First Name*</pre>
-            <pre class="fn"><input type="text" name="firstName"></pre>
-        </div>
-        <div class="item">
-            <pre class="lnheading">Last Name*</pre>
-            <pre class="ln"><input type="text" name="lastName"></pre>
-        </div>
-        <div class="email" class="item">
+            <!-- <div class="item">
+                <span>
+                    <pre class="titleheading">Title*</pre>
+                    <select class="title" id="select_opt" name="title">
+                        <option value="Mr." id="1">Mr.</option>
+                        <option value="Ms." id="2">Ms.</option>
+                        <option value="Mrs." id="3">Mrs.</option>
+                        <option value="Dr." id="4">Dr</option>
+                        <option value="Prof." id="5">Prof.</option>
+                    </select>
+                </span>
+            </div> -->
+            <div class="item">
+                <pre class="fnheading">First Name*</pre>
+                <pre class="fn"><input type="text" name="firstName"></pre>
+                <!-- <input type="text" id="options" name="title"> -->
+            </div>
+            <div class="item">
+                <pre class="lnheading">Last Name*</pre>
+                <pre class="ln"><input type="text" name="lastName"></pre>
+            </div>
+            <div class="email" class="item">
+                <br>
+                <pre class="emailheading">Email*</pre>
+                <input type="text" placeholder="abc@gmail.com" name="email">
+            </div>
             <br>
-            <pre class="emailheading">Email*</pre>
-            <input type="text" placeholder="abc@gmail.com" name="email">
-        </div>
-        <br>
-        <div class="item">
-            <pre class="titleheading">Country*</pre>
-            <select class="title" name="country">
-                <pre><option value="India" id="1">India (+91)</option></pre>
-            </select>
-        </div>
-        <div class="item">
-            <pre class="phoneheading">Phone Number*</pre>
-            <input class="phone" type="tel" placeholder="123456789" name="contactNum">
-        </div>
-        <br><br>
-        <div class="item">
-            <pre class="titleheading">Membership Number</pre>
-            <pre><input class="title" type="tel" name="membershipNum"></pre>
-        </div>
-        <div class="item">
-            <pre class="gsthead">GST Number</pre>
-            <pre><input class="gstnum" type="tel" name="gstNum"></pre>
-        </div>
-        <br><br>
-        <div class="item">
-            <pre class="titleheading"><strong>Special Requests</strong></pre>
-            <pre><textarea class="title" name="special" id="1" rows="5"></textarea></pre>
-        </div>
-        <br><br>
-        <div class="check">
-            <label for="a">
-                <pre><input type="checkbox" value="a" name="policy" id="1"> I have read and understood the Privacy Policy.*</pre>
-            </label>
-            <label for="b">
-                <pre><input type="checkbox" value="b" name="policy" id="2"> I have read and agree to the Terms & Conditions.*</pre>
-            </label>
-            <pre><p class="dec"> * All fields mandatory</p></pre>
-        </div>
-        <div class="asmButt"><a href="#"><span></span><span></span><span></span><span></span>Submit</a></div>
-    </div>
-</form>
+            <!-- <div class="item">
+                <pre class="titleheading">Country*</pre>
+                <select class="title" name="country">
+                    <pre><option value="India" id="1">India (+91)</option></pre>
+                </select>
+            </div> -->
+            <div class="item">
+                <pre class="phoneheading">Phone Number*</pre>
+                <input class="phone" type="tel" placeholder="123456789" name="contactNum">
+            </div>
+            <br><br>
+            <div class="item">
+                <pre class="titleheading">Membership Number</pre>
+                <pre><input class="title" type="tel" name="membershipNum"></pre>
+            </div>
+            <div class="item">
+                <pre class="aadharhead">Aadhar Card Number*</pre>
+                <pre><input class="aadharnum" type="tel" name="aadharNum"></pre>
+            </div>
+            <br><br>
+            <!-- <div class="item">
+                <pre class="titleheading"><strong>Special Requests</strong></pre>
+                <pre><textarea class="title" name="special" id="1" rows="5"></textarea></pre>
+            </div> -->
+            <br><br>
+            <div class="check">
+                <label for="a">
+                    <pre><input type="checkbox" required value="a" name="policy" id="1"> I have read and understood the Privacy Policy.*</pre>
+                </label>
+                <label for="b">
+                    <pre><input type="checkbox" required value="b" name="policy" id="2"> I have read and agree to the Terms & Conditions.*</pre>
+                </label>
+                <pre><p class="dec"> * All fields mandatory</p></pre>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
     </div>
 </body>
 
