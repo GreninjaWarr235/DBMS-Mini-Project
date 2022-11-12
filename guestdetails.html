@@ -13,11 +13,13 @@
     <h2>
         <pre class="guestdetails">Guest Details</pre>
     </h2>
+    
     <div id="container">
+        <form action="guestdetails.php" method="post">
         <div class="item">
             <span>
                 <pre class="titleheading">Title*</pre>
-                <select class="title" name="pos">
+                <select class="title" name="title">
                     <option value="Mr." id="1">Mr.</option>
                     <option value="Ms." id="2">Ms.</option>
                     <option value="Mrs." id="3">Mrs.</option>
@@ -28,16 +30,16 @@
         </div>
         <div class="item">
             <pre class="fnheading">First Name*</pre>
-            <pre class="fn"><input type="text" name="info"></pre>
+            <pre class="fn"><input type="text" name="firstName"></pre>
         </div>
         <div class="item">
             <pre class="lnheading">Last Name*</pre>
-            <pre class="ln"><input type="text" name="info"></pre>
+            <pre class="ln"><input type="text" name="lastName"></pre>
         </div>
         <div class="email" class="item">
             <br>
             <pre class="emailheading">Email*</pre>
-            <input type="text" placeholder="abc@gmail.com" name="info">
+            <input type="text" placeholder="abc@gmail.com" name="email">
         </div>
         <br>
         <div class="item">
@@ -48,21 +50,21 @@
         </div>
         <div class="item">
             <pre class="phoneheading">Phone Number*</pre>
-            <input class="phone" type="tel" placeholder="123456789" name="contactno">
+            <input class="phone" type="tel" placeholder="123456789" name="contactNum">
         </div>
         <br><br>
         <div class="item">
             <pre class="titleheading">Membership Number</pre>
-            <pre><input class="title" type="tel" name="membershipno"></pre>
+            <pre><input class="title" type="tel" name="membershipNum"></pre>
         </div>
         <div class="item">
             <pre class="gsthead">GST Number</pre>
-            <pre><input class="gstnum" type="tel" name="gstno"></pre>
+            <pre><input class="gstnum" type="tel" name="gstNum"></pre>
         </div>
         <br><br>
         <div class="item">
             <pre class="titleheading"><strong>Special Requests</strong></pre>
-            <pre><textarea class="title" name="Special" id="1" rows="5"></textarea></pre>
+            <pre><textarea class="title" name="special" id="1" rows="5"></textarea></pre>
         </div>
         <br><br>
         <div class="check">
@@ -76,6 +78,7 @@
         </div>
         <div class="asmButt"><a href="#"><span></span><span></span><span></span><span></span>Submit</a></div>
     </div>
+</form>
     </div>
 </body>
 
