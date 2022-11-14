@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
   <header class="header">
-    <a class="logo" href="homepage.html"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a>
+    <a class="logo" href="index.php"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a>
     <nav>
       <ul class="nav_links">
         <li>
@@ -20,7 +20,7 @@
           <a href="#amenities">Amenities</a>
         </li>
         <li>
-          <a href="managebooking.html">Manage Booking</a>
+          <a href="managebooking.php">Manage Booking</a>
         </li>
         <li>
           <a href="#connect">Connect With Us</a>
@@ -136,7 +136,7 @@
     <br><br>
     <hr>
     <div class="branchesouter">
-      <a href="Rooms.html" target="_blank">
+      <a href="Rooms.php" target="_blank">
         <div class="branches">
           <div class="Upperblock">
             <img class="branchimg" src="mumbai.png" alt="Mumbai">
@@ -147,7 +147,7 @@
         </div>
       </a>
 
-      <a href="Rooms.html" target="_blank">
+      <a href="Rooms.php" target="_blank">
         <div class="branches">
           <div class="Upperblock">
             <img class="branchimg" src="https://examsdaily.in/wp-content/uploads/2018/12/new-delhi-240x300.jpg"
@@ -159,7 +159,7 @@
         </div>
       </a>
 
-      <a href="Rooms.html" target="_blank">
+      <a href="Rooms.php" target="_blank">
         <div class="branches">
           <div class="Upperblock">
             <img class="branchimg"
@@ -172,7 +172,7 @@
         </div>
       </a>
 
-      <a href="Rooms.html" target="_blank">
+      <a href="Rooms.php" target="_blank">
         <div class="branches">
           <div class="Upperblock">
             <img class="branchimg" src="https://aquablissresort.com/wp-content/uploads/2019/07/pik36-240x300.jpg"

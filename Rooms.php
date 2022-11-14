@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="Rooms_styles.css">
   <header>
     <nav>
-      <a class="logo" href="homepage.html"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a><a
-        href="homepage.html#branches">Our
-        Branches</a><a href="homepage.html#amenities">Amenities</a><a href="managebooking.html">Manage Booking</a>
+      <a class="logo" href="index.php"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a><a
+        href="index.php#branches">Our
+        Branches</a><a href="index.php#amenities">Amenities</a><a href="managebooking.php">Manage Booking</a>
       <div class="asmButt"><a
-          href="homepage.html#mainouterbranches"><span></span><span></span><span></span><span></span>Book a
+          href="index.php#mainouterbranches"><span></span><span></span><span></span><span></span>Book a
           Stay</a></div>
     </nav>
   </header>
@@ -48,7 +48,7 @@
         <div class="price">
           <h3 class="otherprices">From 2000/-</h3>
         </div>
-        <a href="guestdetails.html">
+        <a href="guestdetails.php">
           <div class="button">
             <span>Book </span>
           </div>
@@ -80,7 +80,7 @@
         <div class="price">
           <h3 class="otherprices">From 3000/-</h3>
         </div>
-        <a href="guestdetails.html">
+        <a href="guestdetails.php">
           <div class="button">
             <span>Book </span>
           </div>
@@ -113,7 +113,7 @@
         <div class="price">
           <h3 class="otherprices">From 5000/-</h3>
         </div>
-        <a href="guestdetails.html">
+        <a href="guestdetails.php">
           <div class="button">
             <span>Book </span>
           </div>
@@ -146,7 +146,7 @@
         <div class="price">
           <h3 class="otherprices">From 5000/-</h3>
         </div>
-        <a href="guestdetails.html">
+        <a href="guestdetails.php">
           <div class="button">
             <span>Book </span>
           </div>
@@ -180,7 +180,7 @@
           <h3 class="otherprices">From</h3>
           <h3 class="h31000">10000/-</h3>
         </div>
-        <a href="guestdetails.html">
+        <a href="guestdetails.php">
           <div class="button">
             <span>Book </span>
           </div>
