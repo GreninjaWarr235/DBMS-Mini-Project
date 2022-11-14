@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -17,9 +21,31 @@
   </header>
 </head>
 
-
 <body>
+<?php
+include 'dbconnect.php';
+if ($_SERVER["REQUEST_METHOD"]=="POST"){
+  if ($_POST['flag']=="0") {
+    $_SESSION['start'] = $_POST['start'];
+    $_SESSION['end'] = $_POST['end'];
+  }
 
+  if ($_POST['flag']=="1") {
+    $_SESSION['type'] = $_POST['type'];
+    $_SESSION['price'] = $_POST['price'];
+    $_SESSION['src'] = $_POST['src'];
+    header("location:guestdetails.php");
+  }
+}
+?>
+  <div class="date">
+    <form id="form" action="Rooms.php" method="post">
+      <input type="hidden" name="flag" value="0">
+      <input type="date" required name="start">
+      <input type="date" required name="end">
+      <button type="submit" style="color:black;">Set</button>
+    </form>
+  </div>
   <div class="OuterDiv">
     <br>
     <hr class="mainhr">
@@ -48,9 +74,15 @@
         <div class="price">
           <h3 class="otherprices">From 2000/-</h3>
         </div>
-        <a href="guestdetails.php">
+        <a>
           <div class="button">
-            <span>Book </span>
+            <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="type" value="Deluxe Non-A.C">
+              <input type="hidden" name="price" value="2000">
+              <input type="hidden" name="src" value="deluxe-non-ac-room-500x500 (1).png">
+              <span><button >Book </button></span>
+            </form>
           </div>
         </a>
       </div>
@@ -80,9 +112,15 @@
         <div class="price">
           <h3 class="otherprices">From 3000/-</h3>
         </div>
-        <a href="guestdetails.php">
+        <a>
           <div class="button">
-            <span>Book </span>
+            <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="type" value="Deluxe A.C">
+              <input type="hidden" name="price" value="3000">
+              <input type="hidden" name="src" value="superior-room-ac1 (1).jpg">
+              <span><button >Book </button></span>
+            </form>
           </div>
         </a>
       </div>
@@ -113,9 +151,15 @@
         <div class="price">
           <h3 class="otherprices">From 5000/-</h3>
         </div>
-        <a href="guestdetails.php">
+        <a>
           <div class="button">
-            <span>Book </span>
+            <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="type" value="Executive Suite">
+              <input type="hidden" name="price" value="5000">
+              <input type="hidden" name="src" value="Executive_Suite.jpg">
+              <span><button >Book </button></span>
+            </form>
           </div>
         </a>
 
@@ -146,9 +190,15 @@
         <div class="price">
           <h3 class="otherprices">From 5000/-</h3>
         </div>
-        <a href="guestdetails.php">
+        <a>
           <div class="button">
-            <span>Book </span>
+            <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="type" value="Honeymoon Suite">
+              <input type="hidden" name="price" value="5000">
+              <input type="hidden" name="src" value="https://www.daraphuket.com/images/2397.jpg">
+              <span><button >Book </button></span>
+            </form>
           </div>
         </a>
       </div>
@@ -180,9 +230,15 @@
           <h3 class="otherprices">From</h3>
           <h3 class="h31000">10000/-</h3>
         </div>
-        <a href="guestdetails.php">
+        <a>
           <div class="button">
-            <span>Book </span>
+            <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="type" value="Two Bedroom Villa">
+              <input type="hidden" name="price" value="10000">
+              <input type="hidden" name="src" value="two bedroom villa.jpg">
+              <span><button >Book </button></span>
+            </form>
           </div>
         </a>
       </div>
@@ -202,3 +258,18 @@
 </body>
 
 </html>
+
+<style>
+  .date {
+    margin: auto;
+  }
+
+  button {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
+</style>
