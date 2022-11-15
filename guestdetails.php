@@ -130,7 +130,6 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 
     .guestdetails {
-        margin-left: 50px;
         margin-top: 40px;
         color: hsl(195, 82%, 13%);
     }
