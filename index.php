@@ -50,26 +50,26 @@ session_start();
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img width="100%" height="635" src="Agra.jpg" class="d-block w-100" alt="Agra Photo">
+        <img width="100%" height="643px" src="tajmahal.jpg" class="d-block w-100" alt="Agra Photo">
         <div class="carousel-caption d-none d-md-block">
           <h6>Agra</h6>
         </div>
       </div>
       <div class="carousel-item">
-        <img width="100%" height="635px" src="https://wallpaperset.com/w/full/a/8/c/173787.jpg" class="d-block w-100"
+        <img width="100%" height="643px" src="https://wallpaperset.com/w/full/a/8/c/173787.jpg" class="d-block w-100"
           alt="Delhi Photo">
         <div class="carousel-caption d-none d-md-block">
           <h6>New Delhi</h6>
         </div>
       </div>
       <div class="carousel-item">
-        <img width="100%" height="635px" src="Mumbai.jpg" class="d-block w-100" alt="Mumbai Photo">
+        <img width="100%" height="643px" src="Mumbai.jpg" class="d-block w-100" alt="Mumbai Photo">
         <div class="carousel-caption d-none d-md-block">
           <h6>Mumbai</h6>
         </div>
       </div>
       <div class="carousel-item">
-        <img width="100%" height="635px"
+        <img width="100%" height="643px"
           src="https://pondicherrytourism.co.in/images/places-to-visit/header/paradise-beach-puducherry-tourism-entry-fee-timings-holidays-reviews-header.jpg"
           class="d-block w-100" alt="Puducherry Photo">
         <div class="carousel-caption d-none d-md-block">
