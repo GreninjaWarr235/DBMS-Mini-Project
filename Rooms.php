@@ -22,12 +22,26 @@ session_start();
 </head>
 
 <body>
-<?php
+  <div class="modal" id="modal">
+    <div class="date">
+      <form id="form" action="Rooms.php" method="post">
+        <input type="hidden" name="flag" value="0">
+        <input type="date" required name="start" style="margin-top: 20px;">
+        <br>
+        <input type="date" required name="end" style="margin-top: 20px;">
+        <br>
+        <button
+         type="submit" style="color:black; border: 2px solid black; margin-top: 20px;">Set</button>
+      </form>
+    </div>
+  </div>
+  <?php
 include 'dbconnect.php';
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
   if ($_POST['flag']=="0") {
     $_SESSION['start'] = $_POST['start'];
     $_SESSION['end'] = $_POST['end'];
+    ?><script type="text/javascript">console.log("Hi"); document.getElementById('modal').style.display='none';</script><?php
   }
 
   if ($_POST['flag']=="1") {
@@ -38,14 +52,6 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   }
 }
 ?>
-  <div class="date">
-    <form id="form" action="Rooms.php" method="post">
-      <input type="hidden" name="flag" value="0">
-      <input type="date" required name="start">
-      <input type="date" required name="end">
-      <button type="submit">Set</button>
-    </form>
-  </div>
   <div class="OuterDiv">
     <br>
     <hr class="mainhr">
@@ -77,11 +83,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         <a>
           <div class="button">
             <form action="rooms.php" method="post">
-            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="flag" value="1">
               <input type="hidden" name="type" value="Deluxe Non-A.C">
               <input type="hidden" name="price" value="2000">
               <input type="hidden" name="src" value="deluxe-non-ac-room-500x500 (1).png">
-              <span><button >Book </button></span>
+              <span><button>Book </button></span>
             </form>
           </div>
         </a>
@@ -115,11 +121,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         <a>
           <div class="button">
             <form action="rooms.php" method="post">
-            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="flag" value="1">
               <input type="hidden" name="type" value="Deluxe A.C">
               <input type="hidden" name="price" value="3000">
               <input type="hidden" name="src" value="superior-room-ac1 (1).jpg">
-              <span><button >Book </button></span>
+              <span><button>Book </button></span>
             </form>
           </div>
         </a>
@@ -154,11 +160,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         <a>
           <div class="button">
             <form action="rooms.php" method="post">
-            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="flag" value="1">
               <input type="hidden" name="type" value="Executive Suite">
               <input type="hidden" name="price" value="5000">
               <input type="hidden" name="src" value="Executive_Suite.jpg">
-              <span><button >Book </button></span>
+              <span><button>Book </button></span>
             </form>
           </div>
         </a>
@@ -169,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     <!--  Room4-->
     <div class="roomDiv">
       <div class="roomDiv_img">
-        <img class="roomimg" src="https://www.daraphuket.com/images/2397.jpg" alt="Honeymoon Suite">
+        <img class="roomimg" src="two bedroom villa.jpg" alt="Honeymoon Suite">
       </div>
 
       <div class="roomDiv_desc">
@@ -193,11 +199,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         <a>
           <div class="button">
             <form action="rooms.php" method="post">
-            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="flag" value="1">
               <input type="hidden" name="type" value="Honeymoon Suite">
               <input type="hidden" name="price" value="5000">
-              <input type="hidden" name="src" value="https://www.daraphuket.com/images/2397.jpg">
-              <span><button >Book </button></span>
+              <input type="hidden" name="src" value="two bedroom villa.jpg">
+              <span><button>Book </button></span>
             </form>
           </div>
         </a>
@@ -233,11 +239,11 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         <a>
           <div class="button">
             <form action="rooms.php" method="post">
-            <input type="hidden" name="flag" value="1">
+              <input type="hidden" name="flag" value="1">
               <input type="hidden" name="type" value="Two Bedroom Villa">
               <input type="hidden" name="price" value="10000">
               <input type="hidden" name="src" value="two bedroom villa.jpg">
-              <span><button >Book </button></span>
+              <span><button>Book </button></span>
             </form>
           </div>
         </a>
@@ -261,386 +267,413 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
 <style>
   * {
-  margin: 0;
-  padding: 0;
-}
+    margin: 0;
+    padding: 0;
+  }
 
-header {
-  box-sizing: border-box;
-  position: sticky;
-  text-align: center;
-  background-color: #d5eefc;
-  font-size: 20px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  z-index: 2;
-}
+  header {
+    box-sizing: border-box;
+    position: sticky;
+    text-align: center;
+    background-color: #d5eefc;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    z-index: 2;
+  }
 
-header img {
-  border-radius: 50%;
-}
+  header img {
+    border-radius: 50%;
+  }
 
-.logo {
-  margin: 12px;
-  margin-left: 40px;
-  margin-bottom: 10px;
-  vertical-align: middle;
-  transition: 0.5s;
-}
+  .logo {
+    margin: 12px;
+    margin-left: 40px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+    transition: 0.5s;
+  }
 
-.logo:hover {
-  transform: scale(1.075);
-}
+  .logo:hover {
+    transform: scale(1.075);
+  }
 
-header nav>a {
-  font-size: 19px;
-  text-decoration: none;
-  color: #47b5ff;
-}
+  header nav>a {
+    font-size: 19px;
+    text-decoration: none;
+    color: #47b5ff;
+  }
 
-header nav>a:last-child {
-  margin-right: revert;
-}
+  header nav>a:last-child {
+    margin-right: revert;
+  }
 
-header nav>a:hover {
-  text-decoration: underline;
-}
+  header nav>a:hover {
+    text-decoration: underline;
+  }
 
-header nav>a:visited {
-  color: #3390ce;
-}
+  header nav>a:visited {
+    color: #3390ce;
+  }
 
-header a {
-  align-items: center;
-  margin: 12px;
-  margin-left: 40px;
-  display: inline-block;
-  position: relative;
-  bottom: 0px;
-}
+  header a {
+    align-items: center;
+    margin: 12px;
+    margin-left: 40px;
+    display: inline-block;
+    position: relative;
+    bottom: 0px;
+  }
 
-.asmButt {
-  display: inline-block;
-}
+  .asmButt {
+    display: inline-block;
+  }
 
-.asmButt a {
-  position: relative;
-  padding: 8px;
-  padding-top: 7px;
-  padding-bottom: 9px;
-  text-decoration: none;
-  color: rgba(255, 255, 255, 0.4);
-  background: #0f4c75;
-  letter-spacing: 1px;
-  font-size: 20px;
-}
+  .asmButt a {
+    position: relative;
+    padding: 8px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+    background: #0f4c75;
+    letter-spacing: 1px;
+    font-size: 20px;
+  }
 
-.asmButt a:hover {
-  color: white;
-}
+  .asmButt a:hover {
+    color: white;
+  }
 
-.asmButt a span {
-  display: block;
-  position: absolute;
-  background: #2894ff;
-}
+  .asmButt a span {
+    display: block;
+    position: absolute;
+    background: #2894ff;
+  }
 
-.asmButt a span:nth-child(1) {
-  left: 0;
-  bottom: 0;
-  width: 2px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-}
+  .asmButt a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+  }
 
-.asmButt a:hover span:nth-child(1) {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-}
+  .asmButt a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+  }
 
-.asmButt a span:nth-child(2) {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-}
+  .asmButt a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+  }
 
-.asmButt a:hover span:nth-child(2) {
-  transform: scalex(1);
-  transform-origin: left;
-  transition: transform 0.5s;
-}
+  .asmButt a:hover span:nth-child(2) {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
 
-.asmButt a span:nth-child(3) {
-  right: 0;
-  bottom: 0;
-  width: 2px;
-  height: 100%;
-  transform: scaleY(0);
-  transform-origin: top;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
+  .asmButt a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
 
-.asmButt a:hover span:nth-child(3) {
-  transform: scaleY(1);
-  transform-origin: bottom;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
+  .asmButt a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
 
-.asmButt a span:nth-child(4) {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 2px;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
+  .asmButt a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
 
-.asmButt a:hover span:nth-child(4) {
-  transform: scalex(1);
-  transform-origin: left;
-  transition: transform 0.5s;
-  transition-delay: 0.5s;
-}
+  .asmButt a:hover span:nth-child(4) {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+  }
 
-.date {
-  margin: auto;
-}
+  .date {
+    z-index: 3;
+    /* display: block;  */
+    /* align-self: center;  */
+    margin: auto;
+    background-color: white;
+    padding: 50px;
+    max-width: fit-content;
+    height: 200px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
-button {
-  cursor: pointer;
-  background: none;
-  color: white;
-  border: none;
-  font-size: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
+  .modal {
+    z-index: 4;
+    position: fixed;
+    margin: auto;
+    background-color: rgba(146, 146, 146, 0.082);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 
-.OuterDiv {
-  height: 1500px;
-  width: 1050px;
-  margin: auto;
-  padding: 10px;
-}
+  button {
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  }
 
-.mainhr {
-  border-style: none;
-  border-top-style: dotted;
-  border-color: #98cdeb;
-  border-width: 7px;
-  width: 7%;
-  margin: auto;
-  padding-bottom: 20px;
-}
+  .OuterDiv {
+    height: 1500px;
+    width: 1050px;
+    margin: auto;
+    padding: 10px;
+  }
 
-#Heading {
-  color: hsl(203, 86%, 29%);
-  text-align: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+  .mainhr {
+    border-style: none;
+    border-top-style: dotted;
+    border-color: #98cdeb;
+    border-width: 7px;
+    width: 7%;
+    margin: auto;
+    padding-bottom: 20px;
+  }
 
-.roomDiv {
-  height: 250px;
-  margin: 20px 0 20px 0;
-  background-color: #e8f9fd;
-  border: 4px solid #256d85;
-}
+  #Heading {
+    color: hsl(203, 86%, 29%);
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
 
-/* Image Section */
-.roomDiv_img {
-  display: inline-block;
-  height: 250px;
-  width: 300px;
-}
+  .roomDiv {
+    height: 250px;
+    margin: 20px 0 20px 0;
+    background-color: #e8f9fd;
+    border: 4px solid #256d85;
+  }
 
-.roomimg {
-  position: absolute;
-  height: 250px;
-  width: 300px;
-}
+  /* Image Section */
+  .roomDiv_img {
+    display: inline-block;
+    height: 250px;
+    width: 300px;
+  }
 
-/* Description Section */
-.roomDiv_desc {
-  display: inline-block;
-  height: 250px;
-  width: 492px;
-  vertical-align: top;
-  position: relative;
-}
+  .roomimg {
+    position: absolute;
+    height: 250px;
+    width: 300px;
+  }
 
-.room_title {
-  display: inline-block;
+  /* Description Section */
+  .roomDiv_desc {
+    display: inline-block;
+    height: 250px;
+    width: 492px;
+    vertical-align: top;
+    position: relative;
+  }
 
-  height: 60px;
-  width: 482px;
-}
+  .room_title {
+    display: inline-block;
 
-.title {
-  display: inline-block;
-  padding-top: 20px;
-  margin-left: 20px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
+    height: 60px;
+    width: 482px;
+  }
 
-.hello {
-  display: inline-block;
-  width: 3px;
-}
+  .title {
+    display: inline-block;
+    padding-top: 20px;
+    margin-left: 20px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  }
 
-.roomdesc {
-  display: inline-block;
-  height: 130px;
-  width: 482px;
-  position: absolute;
-  left: 24px;
-  top: 70px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border-bottom: 10px;
-  border-top: 2px ridge #256d85;
-  padding-top: 20px;
-}
+  .hello {
+    display: inline-block;
+    width: 3px;
+  }
 
-.room_am {
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  left: 24px;
-  height: 50px;
-  width: 482px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+  .roomdesc {
+    display: inline-block;
+    height: 130px;
+    width: 482px;
+    position: absolute;
+    left: 24px;
+    top: 70px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    border-bottom: 10px;
+    border-top: 2px ridge #256d85;
+    padding-top: 20px;
+  }
 
-.review {
-  display: inline-block;
-  margin-top: 15px;
-}
+  .room_am {
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 24px;
+    height: 50px;
+    width: 482px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 
-/* End Section */
-.roomDiv_end {
-  display: inline-block;
-  height: 250px;
-  width: 240px;
-  position: relative;
-}
+  .review {
+    display: inline-block;
+    margin-top: 15px;
+  }
 
-.button span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
+  /* End Section */
+  .roomDiv_end {
+    display: inline-block;
+    height: 250px;
+    width: 240px;
+    position: relative;
+  }
 
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
 
-.button:hover span {
-  padding-right: 25px;
-}
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
 
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
-}
+  .button:hover span {
+    padding-right: 25px;
+  }
 
-.button {
-  position: absolute;
-  bottom: 30px;
-  right: 40px;
-  border-radius: 4px;
-  background-color: #06283d;
-  border: none;
-  color: #ffffff;
-  text-align: center;
-  font-size: 22px;
-  padding: 20px;
-  width: 70px;
-  cursor: pointer;
-  margin: 5px;
-}
+  .button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
-.price {
-  display: inline-block;
-  height: 20px;
-  width: 50px;
-  position: absolute;
-  top: 70px;
-  right: 74px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
+  .button {
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+    border-radius: 4px;
+    background-color: #06283d;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px;
+    width: 70px;
+    cursor: pointer;
+    margin: 5px;
+  }
 
-.h31000 {
-  margin-left: -7px;
-}
+  .price {
+    display: inline-block;
+    height: 20px;
+    width: 50px;
+    position: absolute;
+    top: 70px;
+    right: 74px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
 
-.otherprices {
-  margin-left: -2px;
-}
+  .h31000 {
+    margin-left: -7px;
+  }
 
-footer {
-  justify-content: center;
-  background-color: #dff6ff;
-  width: 100%;
-  text-align: center;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  padding-top: 5px;
-  padding-bottom: 14px;
-  font-size: 18px;
-  color: hsl(195, 82%, 13%);
-}
+  .otherprices {
+    margin-left: -2px;
+  }
 
-footer p {
-  font-size: 15px;
-  padding: 8px;
-  padding-bottom: 21px;
-}
+  footer {
+    justify-content: center;
+    background-color: #dff6ff;
+    width: 100%;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    padding-top: 5px;
+    padding-bottom: 14px;
+    font-size: 18px;
+    color: hsl(195, 82%, 13%);
+  }
 
-footer a {
-  margin-right: 40px;
-}
+  footer p {
+    font-size: 15px;
+    padding: 8px;
+    padding-bottom: 21px;
+  }
 
-footer img {
-  transition: 0.3s;
-}
+  footer a {
+    margin-right: 40px;
+  }
 
-footer img:hover {
-  transform: scale(1.3);
-}
+  footer img {
+    transition: 0.3s;
+  }
 
-footer a:last-child {
-  margin-right: revert;
-}
+  footer img:hover {
+    transform: scale(1.3);
+  }
 
-.facebook {
-  padding-bottom: 4px;
-}
+  footer a:last-child {
+    margin-right: revert;
+  }
 
-.youtube {
-  padding-bottom: 2px;
-}
+  .facebook {
+    padding-bottom: 4px;
+  }
 
-.instagram {
-  padding-bottom: -1px;
-}
+  .youtube {
+    padding-bottom: 2px;
+  }
+
+  .instagram {
+    padding-bottom: -1px;
+  }
 </style>

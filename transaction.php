@@ -24,6 +24,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $price = $diff->format("%a") * $_SESSION['price'];
         $query = "INSERT INTO `order-details` (`fname`,`lname`,`src`,`room_type`,`sdate`,`edate`,`price`,`name`) VALUES ('$fname','$lname','$src','$room_type','$sdate','$edate','$price','$name')";
         $result = mysqli_query($conn, $query);
+        header("location:confo.php");
     }
 }
 ?>
