@@ -10,7 +10,6 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guest Details</title>
-    <link rel="stylesheet" href="guestdetails.css">
 </head>
 
 <?php
@@ -37,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
 <body>
     <h2>
-        <pre class="guestdetails" style="text-align: center;">Guest Details</pre>
+        <pre class="guestdetails" style="text-align: center; font-size: 26px;">Guest Details</pre>
     </h2>
     <div id="container">
         <form action="guestdetails.php" method="post">
@@ -110,12 +109,15 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 </html>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
     body {
         background-color: #f5f5f5;
     }
 
     #container {
         margin: auto;
+        margin-bottom: 55px;
         background-color: white;
         width: 548px;
         padding-top: 13px;
@@ -126,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     }
 
     pre {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Lato', sans-serif;
     }
 
     .guestdetails {

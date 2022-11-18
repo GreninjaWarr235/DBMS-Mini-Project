@@ -10,7 +10,6 @@ session_start();
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homepage</title>
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
   <header class="header">
     <a class="logo" href="index.php"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a>
@@ -50,9 +49,9 @@ session_start();
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img width="100%" height="643px" src="tajmahal.jpg" class="d-block w-100" alt="Agra Photo">
+        <img width="100%" height="643px" src="Mumbai.jpg" class="d-block w-100" alt="Mumbai Photo">
         <div class="carousel-caption d-none d-md-block">
-          <h6>Agra</h6>
+          <h6>Mumbai</h6>
         </div>
       </div>
       <div class="carousel-item">
@@ -63,9 +62,9 @@ session_start();
         </div>
       </div>
       <div class="carousel-item">
-        <img width="100%" height="643px" src="Mumbai.jpg" class="d-block w-100" alt="Mumbai Photo">
+        <img width="100%" height="643px" src="tajmahal.jpg" class="d-block w-100" alt="Agra Photo">
         <div class="carousel-caption d-none d-md-block">
-          <h6>Mumbai</h6>
+          <h6>Agra</h6>
         </div>
       </div>
       <div class="carousel-item">
@@ -87,7 +86,7 @@ session_start();
     </button>
   </div>
   <br>
-  <h3>EXPLORE MVS</h3>
+  <h3 style="padding-bottom:15px">EXPLORE MVS</h3>
   <div class="intro">
     <h5>Descend into a world that was once the sole preserve of royalty, step onto the soft, white sand beaches at a
       secluded island or discover the hidden secrets of mist-draped hills with MVS</h5>
@@ -121,7 +120,7 @@ session_start();
     <div class="text">
       <p>URBAN GETAWAYS</p>
       There is magic to be found in the energy of a bustling city. Where vibrant markets offer you everything you could
-      imagine and centuries of history hide in the most unassuming places. Discover the world’s most spectacular urban
+      imagine and centuries of history hide in the most unassuming places. Discover the world's most spectacular urban
       hubs.
     </div>
     <div><img class="intro_img" height="200px" width="300px"
@@ -134,11 +133,11 @@ session_start();
       been perfected over a century, MVS delivers unmatched experiences and lasting memories for guests around the
       world. </p>
     <p>Our branches span from the mighty north to the majestic south with a blend of their unique cultures. Experience
-      your stay with us at Mumbai, Agra, Delhi and Puducherry.</p>
+      your stay with us at Mumbai, New Delhi, Agra and Puducherry.</p>
   </div>
   <div id="mainouterbranches">
     <br><br>
-    <hr>
+    <hr style="margin-bottom: 20px;">
     <div class="branchesouter">
       <a href="Rooms.php" target="_blank">
         <div class="branches">
@@ -146,7 +145,7 @@ session_start();
             <img class="branchimg" src="mumbai.png" alt="Mumbai">
           </div>
           <div class="lowerblock">
-            <h4 class="hotelCityName">Mumbai</h4>
+            <h5 class="hotelCityName">Mumbai</h5>
           </div>
         </div>
       </a>
@@ -158,7 +157,7 @@ session_start();
               alt="New Delhi">
           </div>
           <div class="lowerblock">
-            <h4 class="hotelCityName">New Delhi</h4>
+            <h5 class="hotelCityName">New Delhi</h5>
           </div>
         </div>
       </a>
@@ -171,7 +170,7 @@ session_start();
               alt="Agra">
           </div>
           <div class="lowerblock">
-            <h4 class="hotelCityName">Agra</h4>
+            <h5 class="hotelCityName">Agra</h5>
           </div>
         </div>
       </a>
@@ -183,11 +182,11 @@ session_start();
               alt="Kerala">
           </div>
           <div class="lowerblock">
-            <h4 class="hotelCityName">Puducherry</h4>
+            <h5 class="hotelCityName">Puducherry</h5>
           </div>
         </div>
       </a>
-      <hr>
+      <hr style="margin-top: 20px;">
       <br><br>
     </div>
   </div>
@@ -237,3 +236,395 @@ session_start();
 </body>
 
 </html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+}
+
+body {
+  margin: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 70px);
+}
+
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: #d5eefc;
+  z-index: 1;
+}
+
+.nav_links {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.nav_links li {
+  display: inline-block;
+}
+
+.logo {
+  margin: 0px;
+  padding-left: 250px;
+}
+
+.logo img {
+  border-radius: 50%;
+  transition: .5s;
+}
+
+.logo img:hover {
+  transform: scale(1.075);
+}
+
+header nav>a:last-child {
+  margin-right: revert;
+}
+
+header nav>a:hover {
+  text-decoration: underline;
+}
+
+header nav>a:visited {
+  color: #3390ce;
+}
+
+header a {
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+  color: #47B5FF;
+  align-items: center;
+  margin: 12px;
+  display: inline-block;
+  position: relative;
+}
+
+.asmButt {
+  padding-right: 250px;
+  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+}
+
+.asmButt a {
+  position: relative;
+  padding: 8px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  background: #0F4C75;
+  letter-spacing: 1px;
+  font-size: 20px;
+}
+
+.asmButt a:hover {
+  color: white;
+}
+
+.asmButt a span {
+  display: block;
+  position: absolute;
+  background: #2894ff;
+}
+
+.asmButt a span:nth-child(1) {
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+}
+
+.asmButt a:hover span:nth-child(1) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+}
+
+.asmButt a span:nth-child(2) {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+.asmButt a:hover span:nth-child(2) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+.asmButt a span:nth-child(3) {
+  right: 0;
+  bottom: 0;
+  width: 2px;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.asmButt a:hover span:nth-child(3) {
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.asmButt a span:nth-child(4) {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.asmButt a:hover span:nth-child(4) {
+  transform: scalex(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+h3 {
+  padding-top: 30px;
+  color: hsl(203, 86%, 29%);
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#carouselExampleCaptions h6 {
+  color: white;
+}
+
+h5 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: hsl(195, 82%, 13%);
+}
+
+.intro {
+  margin: auto;
+  text-align: center;
+  width: 800px;
+}
+
+.intro_container {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  width: auto;
+  height: auto;
+  justify-content: center;
+  grid-gap: 10px;
+  padding: 10px;
+  padding-bottom: 30px;
+}
+
+.intro_container div {
+  background-color: #b2cce7;
+  height: 250px;
+  border-radius: 6px;
+}
+
+.text p {
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+}
+
+.text {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding: 20px;
+  padding-top: 30px;
+}
+
+.intro_img {
+  height: 100%;
+  width: 100%;
+  border-radius: 6px;
+}
+
+.intro_container div p {
+  text-align: center;
+}
+
+footer {
+  justify-content: center;
+  background-color: #dff6ff;
+  width: 100%;
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-top: 5px;
+  padding-bottom: 16px;
+  font-size: 18px;
+  color: hsl(195, 82%, 13%);
+}
+
+footer p {
+  font-size: 15px;
+  padding: 8px;
+  padding-bottom: 4px;
+}
+
+footer a {
+  margin-right: 40px;
+}
+
+footer img {
+  transition: .3s;
+}
+
+footer img:hover {
+  transform: scale(1.3);
+}
+
+footer a:last-child {
+  margin-right: revert;
+}
+
+.image_container img:hover {
+  border-radius: 25px;
+  box-shadow: 0 0 11px hsla(193, 63%, 17%, 0.682);
+}
+
+.image_container img {
+  border-radius: 10px;
+  transition: all ease 0.7s;
+}
+
+.image_container img:last-child {
+  grid-gap: revert;
+}
+
+.image_container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, minmax(300px, max-content));
+  grid-gap: 20px;
+  height: auto;
+  width: auto;
+}
+
+#branches {
+  padding-bottom: 15px;
+}
+
+.branches {
+  display: inline-block;
+  width: 240px;
+  height: 350px;
+  margin: 25px;
+  transition: 0.5s;
+  border-width: 3px;
+}
+
+.branches:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+.branchfirst {
+  display: inline-block;
+  width: 240px;
+  height: 350px;
+  margin: 25px;
+  margin-left: 70px;
+  transition: 0.5s;
+}
+
+.branchimg {
+  margin: 0 auto 0 auto;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-width: 3px;
+  text-decoration: none;
+}
+
+.lowerblock {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: inline-block;
+  height: 50px;
+  width: 240px;
+  background-color: #DFF6FF;
+  position: relative;
+  text-align: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-width: 3px;
+}
+
+.Upperblock {
+  height: 300px;
+  width: 240px;
+  bottom: 50px;
+  border-radius: 20px;
+}
+
+.hotelCityName {
+  display: inline-block;
+  text-align: center;
+  margin-top: 13px;
+  margin-bottom: 10px;
+  color: #06283D;
+}
+
+.branchesouter {
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+#mainouterbranches {
+  margin-left: 170px;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+#mainouterbranches a {
+  text-decoration: none;
+}
+
+#mainouterbranches hr {
+  margin: auto;
+  border-style: none;
+  border-top-style: dotted;
+  border-color: #47b5ff;
+  border-width: 7px;
+  width: 7%;
+}
+
+.branchDesc {
+  margin: auto;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  width: 750px;
+  text-align: center;
+}
+</style>

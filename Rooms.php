@@ -6,42 +6,59 @@ session_start();
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rooms</title>
-  <link rel="stylesheet" href="Rooms_styles.css">
-  <header>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+  <header class="header">
+    <a class="logo" href="index.php"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a>
     <nav>
-      <a class="logo" href="index.php"><img height="55" width="55" src="Logo1.jpeg" alt="Hotel Logo"></a><a
-        href="index.php#branches">Our
-        Branches</a><a href="index.php#amenities">Amenities</a><a href="managebooking.php">Manage Booking</a>
-      <div class="asmButt"><a
-          href="index.php#mainouterbranches"><span></span><span></span><span></span><span></span>Book a
-          Stay</a></div>
+      <ul class="nav_links">
+        <li>
+          <a href="index.php#branches">Our
+            Branches</a>
+        </li>
+        <li>
+          <a href="index.php#amenities">Amenities</a>
+        </li>
+        <li>
+          <a href="managebooking.php">Manage Booking</a>
+        </li>
+        <li>
+          <a href="#connect">Connect With Us</a>
+        </li>
+        <div class="asmButt"><a href="index.php#mainouterbranches"><span></span><span></span><span></span><span></span>Book a
+            Stay</a></div>
+      </ul>
     </nav>
   </header>
 </head>
 
 <body>
-  <div class="modal" id="modal">
-    <div class="date">
+  <div id="modal" class="modal" style="display:block;">
+  <div class="date">
       <form id="form" action="Rooms.php" method="post">
         <input type="hidden" name="flag" value="0">
-        <input type="date" required name="start" style="margin-top: 20px;">
+        <p style="margin: 0px">Start Date</p>
+        <input type="date" style="margin-top: 5px; margin-bottom: 15px;" placeholder="DD/MM/YYYY" required name="start" style="margin-top: 20px;">
         <br>
-        <input type="date" required name="end" style="margin-top: 20px;">
+        <p style="margin: 0px;">End Date</p>
+        <input type="date" style="margin-top: 5px;" placeholder="DD/MM/YYYY" required name="end" style="margin-top: 20px;">
         <br>
-        <button
-         type="submit" style="color:black; border: 2px solid black; margin-top: 20px;">Set</button>
+        <button type="submit">Set</button>
       </form>
     </div>
-  </div>
+</div>
   <?php
 include 'dbconnect.php';
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
   if ($_POST['flag']=="0") {
     $_SESSION['start'] = $_POST['start'];
     $_SESSION['end'] = $_POST['end'];
-    ?><script type="text/javascript">console.log("Hi"); document.getElementById('modal').style.display='none';</script><?php
+    ?>
+  <script type="text/javascript">document.getElementById('modal').style.display = 'none';</script>
+  <?php
   }
 
   if ($_POST['flag']=="1") {
@@ -55,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   <div class="OuterDiv">
     <br>
     <hr class="mainhr">
-    <h1 id="Heading">Rooms</h1>
+    <h1 id="Heading" style="weight: 1000px;">Rooms</h1>
 
 
     <div class="roomDiv">
@@ -65,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_desc">
         <div class="room_title">
-          <h1 class="title">Deluxe Non-A.C</h1>
+          <h2 class="title">Deluxe Non-A.C</h2>
         </div>
         <div class="roomdesc">
           <p>Room Capacity: 2 Persons</p>
@@ -78,19 +95,18 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_end">
         <div class="price">
-          <h3 class="otherprices">From 2000/-</h3>
+          <h3 class="otherprices">From<br>&#8377; 2000/-</h3>
         </div>
-        <a>
-          <div class="button">
-            <form action="rooms.php" method="post">
-              <input type="hidden" name="flag" value="1">
-              <input type="hidden" name="type" value="Deluxe Non-A.C">
-              <input type="hidden" name="price" value="2000">
-              <input type="hidden" name="src" value="deluxe-non-ac-room-500x500 (1).png">
-              <span><button>Book </button></span>
-            </form>
-          </div>
-        </a>
+        <div class="button">
+          <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+            <input type="hidden" name="type" value="Deluxe Non-A.C">
+            <input type="hidden" name="price" value="2000">
+            <input type="hidden" name="src" value="deluxe-non-ac-room-500x500 (1).png">
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
+                  >Book</button></a></div>
+          </form>
+        </div>
       </div>
 
     </div>
@@ -103,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_desc">
         <div class="room_title">
-          <h1 class="title">Deluxe A.C</h1>
+          <h2 class="title">Deluxe A.C</h2>
         </div>
         <div class="roomdesc">
           <p>Room Capacity: 2 Persons</p>
@@ -116,19 +132,18 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_end">
         <div class="price">
-          <h3 class="otherprices">From 3000/-</h3>
+          <h3 class="otherprices">From<br>&#8377; 3000/-</h3>
         </div>
-        <a>
-          <div class="button">
-            <form action="rooms.php" method="post">
-              <input type="hidden" name="flag" value="1">
-              <input type="hidden" name="type" value="Deluxe A.C">
-              <input type="hidden" name="price" value="3000">
-              <input type="hidden" name="src" value="superior-room-ac1 (1).jpg">
-              <span><button>Book </button></span>
-            </form>
-          </div>
-        </a>
+        <div class="button">
+          <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+            <input type="hidden" name="type" value="Deluxe A.C">
+            <input type="hidden" name="price" value="3000">
+            <input type="hidden" name="src" value="superior-room-ac1 (1).jpg">
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit"
+                  >Book</button></a></div>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -141,7 +156,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_desc">
         <div class="room_title">
-          <h1 class="title">Executive Suite</h1>
+          <h2 class="title">Executive Suite</h2>
         </div>
         <div class="roomdesc">
           <p>Room Capacity: 4 Persons</p>
@@ -155,32 +170,30 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_end">
         <div class="price">
-          <h3 class="otherprices">From 5000/-</h3>
+          <h3 class="otherprices">From<br>&#8377; 5000/-</h3>
         </div>
-        <a>
-          <div class="button">
-            <form action="rooms.php" method="post">
-              <input type="hidden" name="flag" value="1">
-              <input type="hidden" name="type" value="Executive Suite">
-              <input type="hidden" name="price" value="5000">
-              <input type="hidden" name="src" value="Executive_Suite.jpg">
-              <span><button>Book </button></span>
-            </form>
-          </div>
-        </a>
-
+        <div class="button">
+          <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+            <input type="hidden" name="type" value="Executive Suite">
+            <input type="hidden" name="price" value="5000">
+            <input type="hidden" name="src" value="Executive_Suite.jpg">
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
+                  >Book</button></a></div>
+          </form>
+        </div>
       </div>
     </div>
 
     <!--  Room4-->
     <div class="roomDiv">
       <div class="roomDiv_img">
-        <img class="roomimg" src="two bedroom villa.jpg" alt="Honeymoon Suite">
+        <img class="roomimg" src="https://i.pinimg.com/originals/78/74/7f/78747fb2b7cc49a3f3571a1cc0a1f77b.jpg" alt="Honeymoon Suite">
       </div>
 
       <div class="roomDiv_desc">
         <div class="room_title">
-          <h1 class="title">Honeymoon Suite</h1>
+          <h2 class="title">Honeymoon Suite</h2>
         </div>
         <div class="roomdesc">
           <p>Room Capacity: 2 Persons</p>
@@ -194,19 +207,18 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_end">
         <div class="price">
-          <h3 class="otherprices">From 5000/-</h3>
+          <h3 class="otherprices">From<br>&#8377; 5000/-</h3>
         </div>
-        <a>
-          <div class="button">
-            <form action="rooms.php" method="post">
-              <input type="hidden" name="flag" value="1">
-              <input type="hidden" name="type" value="Honeymoon Suite">
-              <input type="hidden" name="price" value="5000">
-              <input type="hidden" name="src" value="two bedroom villa.jpg">
-              <span><button>Book </button></span>
-            </form>
-          </div>
-        </a>
+        <div class="button">
+          <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+            <input type="hidden" name="type" value="Honeymoon Suite">
+            <input type="hidden" name="price" value="5000">
+            <input type="hidden" name="src" value="https://i.pinimg.com/originals/78/74/7f/78747fb2b7cc49a3f3571a1cc0a1f77b.jpg">
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
+                  >Book</button></a></div>
+          </form>
+        </div>
       </div>
 
     </div>
@@ -219,7 +231,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_desc">
         <div class="room_title">
-          <h1 class="title">Two Bedroom Villa</h1>
+          <h2 class="title">Two Bedroom Villa</h2>
         </div>
         <div class="roomdesc">
           <p>Room Capacity: 6 Persons</p>
@@ -233,75 +245,89 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
       <div class="roomDiv_end">
         <div class="price">
-          <h3 class="otherprices">From</h3>
-          <h3 class="h31000">10000/-</h3>
+          <h3 class="h3others">From<br>&#8377; 10000/-</h3>
         </div>
-        <a>
-          <div class="button">
-            <form action="rooms.php" method="post">
-              <input type="hidden" name="flag" value="1">
-              <input type="hidden" name="type" value="Two Bedroom Villa">
-              <input type="hidden" name="price" value="10000">
-              <input type="hidden" name="src" value="two bedroom villa.jpg">
-              <span><button>Book </button></span>
-            </form>
-          </div>
-        </a>
+        <div class="button">
+          <form action="rooms.php" method="post">
+            <input type="hidden" name="flag" value="1">
+            <input type="hidden" name="type" value="Two Bedroom Villa">
+            <input type="hidden" name="price" value="10000">
+            <input type="hidden" name="src" value="two bedroom villa.jpg">
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
+                  >Book</button></a></div>
+          </form>
+        </div>
       </div>
 
     </div>
 
   </div>
   <footer>
-    <p>Connect with us</p>
+    <p id="connect">Connect With Us</p>
     <div>
       <a href="" target="_main"><img class="facebook" height="28px" width="28px" src="facebook.png"></a></pre>
       <a href="" target="_main"><img class="instagram" height="35px" width="35px" src="instagram.png"></a></pre>
       <a href="" target="_main"><img class="twitter" height="34px" width="34px" src="twitter.png"></a></pre>
-      <a href="" target="_main"><img class="youtube" height="32px" width="32px" src="youtube.png" height="40"></a></pre>
+      <a href="" target="_main"><img class="youtube" height="32px" width="32px" src="youtube.png"></a></pre>
     </div>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0px;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding, 70px);
   }
 
   header {
-    box-sizing: border-box;
     position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: center;
     background-color: #d5eefc;
-    font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    z-index: 2;
+    z-index: 1;
   }
 
-  header img {
-    border-radius: 50%;
+  .nav_links {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+  }
+
+  .nav_links li {
+    display: inline-block;
   }
 
   .logo {
-    margin: 12px;
-    margin-left: 40px;
-    margin-bottom: 10px;
-    vertical-align: middle;
-    transition: 0.5s;
+    margin: 0px;
+    padding-left: 250px;
   }
 
-  .logo:hover {
+  .logo img {
+    border-radius: 50%;
+    transition: .5s;
+  }
+
+  .logo img:hover {
     transform: scale(1.075);
-  }
-
-  header nav>a {
-    font-size: 19px;
-    text-decoration: none;
-    color: #47b5ff;
   }
 
   header nav>a:last-child {
@@ -317,26 +343,29 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   }
 
   header a {
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    color: #47B5FF;
     align-items: center;
     margin: 12px;
-    margin-left: 40px;
     display: inline-block;
     position: relative;
-    bottom: 0px;
   }
 
-  .asmButt {
+  header .asmButt {
+    padding-right: 250px;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
     display: inline-block;
   }
 
   .asmButt a {
     position: relative;
     padding: 8px;
-    padding-top: 7px;
-    padding-bottom: 9px;
     text-decoration: none;
     color: rgba(255, 255, 255, 0.4);
-    background: #0f4c75;
+    background: #0F4C75;
     letter-spacing: 1px;
     font-size: 20px;
   }
@@ -419,21 +448,53 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     transition-delay: 0.5s;
   }
 
+  input[type="date"] {
+    padding: 10px;
+    border: none;
+    background-color: #0F4C75;
+    color: white;
+    outline: none;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  ::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+  }
+
   .date {
+    font-family: 'Lato', sans-serif;
     z-index: 3;
-    /* display: block;  */
-    /* align-self: center;  */
     margin: auto;
+    border-radius: 25px;
     background-color: white;
-    padding: 50px;
+    padding: 39px 50px 10px 50px;
     max-width: fit-content;
-    height: 200px;
+    height: 296px;
     text-align: center;
     position: fixed;
     top: 0;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     right: 0;
+  }
+
+  .date button {
+    padding: 6px 12px 6px 12px; 
+    color:white; 
+    background-color: #b2cce7; 
+    margin-top: 22px; 
+    border-radius: 15px;
+    transition: transform 0.3s;
+  }
+
+  .date button:hover {
+    transform: scale(1.02);
+  }
+
+  .modal form {
+    align-items: center;
+    justify-content: center;
   }
 
   .modal {
@@ -451,15 +512,6 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     right: 0;
   }
 
-  button {
-    cursor: pointer;
-    background: none;
-    color: white;
-    border: none;
-    font-size: 20px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-  }
-
   .OuterDiv {
     height: 1500px;
     width: 1050px;
@@ -470,7 +522,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   .mainhr {
     border-style: none;
     border-top-style: dotted;
-    border-color: #98cdeb;
+    border-color: #47b5ff;
     border-width: 7px;
     width: 7%;
     margin: auto;
@@ -480,7 +532,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   #Heading {
     color: hsl(203, 86%, 29%);
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
   }
 
   .roomDiv {
@@ -499,7 +551,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
   .roomimg {
     position: absolute;
-    height: 250px;
+    height: 242px;
     width: 300px;
   }
 
@@ -514,14 +566,13 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
   .room_title {
     display: inline-block;
-
     height: 60px;
     width: 482px;
   }
 
   .title {
     display: inline-block;
-    padding-top: 20px;
+    padding-top: 18px;
     margin-left: 20px;
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
       "Lucida Sans", Arial, sans-serif;
@@ -539,11 +590,10 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     position: absolute;
     left: 24px;
     top: 70px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: 'Lato', sans-serif;
     border-bottom: 10px;
     border-top: 2px ridge #256d85;
-    padding-top: 20px;
+    padding-top: 11px;
   }
 
   .room_am {
@@ -559,75 +609,69 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
   .review {
     display: inline-block;
-    margin-top: 15px;
+    margin-top: 8px;
   }
 
   /* End Section */
   .roomDiv_end {
-    display: inline-block;
-    height: 250px;
-    width: 240px;
-    position: relative;
-  }
-
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  .button span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .button:hover span {
-    padding-right: 25px;
-  }
-
-  .button:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-
-  .button {
-    position: absolute;
-    bottom: 30px;
-    right: 40px;
-    border-radius: 4px;
-    background-color: #06283d;
-    border: none;
-    color: #ffffff;
     text-align: center;
-    font-size: 22px;
-    padding: 20px;
-    width: 70px;
-    cursor: pointer;
-    margin: 5px;
+    justify-content: center;
+    display: inline-block;
+    height: 242px;
+    width: 210px;
+    top: -8px;
+    left: 11px;
+    position: relative;
+  }
+
+  .button .asmButt {
+    position: absolute;
+    bottom: 40px;
+    right: 68px;
+    font-family: 'Lato', sans-serif;
+  }
+
+  button {
+    cursor:pointer; 
+    background:none; 
+    border:none; 
+    font-size:20px; 
+    font-family:'Lato', sans-serif; 
+    color:rgba(255, 255, 255, 0.4);
+  }
+
+  button:hover {
+    color: white;
+  }
+
+  .button .asmButt a {
+    padding: 10px;
   }
 
   .price {
     display: inline-block;
-    height: 20px;
-    width: 50px;
+    height: auto;
+    width: auto;
     position: absolute;
-    top: 70px;
-    right: 74px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  }
-
-  .h31000 {
-    margin-left: -7px;
+    /* top: 88px;
+    right: 74px; */
+    font-family: 'Lato', sans-serif;
   }
 
   .otherprices {
-    margin-left: -2px;
+    position: absolute;
+    right: -43px;
+    top: 100px;
+    font-size: 20px;
+    width: 78px;
+  }
+
+  .h3others {
+    position: absolute;
+    right: -47px;
+    top: 100px;
+    font-size: 20px;
+    width: 87px;
   }
 
   footer {
@@ -635,10 +679,9 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
     background-color: #dff6ff;
     width: 100%;
     text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding-top: 5px;
-    padding-bottom: 14px;
+    padding-bottom: 16px;
     font-size: 18px;
     color: hsl(195, 82%, 13%);
   }
@@ -646,7 +689,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   footer p {
     font-size: 15px;
     padding: 8px;
-    padding-bottom: 21px;
+    padding-bottom: 4px;
   }
 
   footer a {
@@ -654,7 +697,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   }
 
   footer img {
-    transition: 0.3s;
+    transition: .3s;
   }
 
   footer img:hover {
@@ -663,17 +706,5 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
   footer a:last-child {
     margin-right: revert;
-  }
-
-  .facebook {
-    padding-bottom: 4px;
-  }
-
-  .youtube {
-    padding-bottom: 2px;
-  }
-
-  .instagram {
-    padding-bottom: -1px;
   }
 </style>
