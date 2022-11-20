@@ -20,11 +20,19 @@ session_start();
     $res2 = mysqli_query($conn, $query2);
     $result2 = mysqli_fetch_assoc($res2);
     ?>
-    <div>
-        <p style="color: green;">Transaction was successful!</p>
-        <p>Amount Paid <?php echo $result2['price']?></p> 
-        <p>Room Booked <?php echo $result2['room_type']?></p>
-        <p>Confirmation Number <?php echo $result1['srn']?></p>
+    <div class="container">
+        <h2 style="color: green; text-align: center;">Transaction was successful!</h2>
+        <div style="text-align: center; font-size: 20px;">
+            <p>Amount Paid: &#8377; <?php echo $result2['price']?></p> 
+            <p>Room Booked: <?php echo $result2['room_type']?></p>
+            <p>Confirmation Number: <?php echo $result1['srn']?></p>
+        </div>
     </div>
 </body>
 </html>
+
+<style>
+    .container {
+        
+    }
+</style>

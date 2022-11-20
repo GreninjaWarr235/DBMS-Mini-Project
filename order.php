@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         $res1 = mysqli_query($conn,$sql1);
         $result1 = mysqli_fetch_assoc($res1);
     ?> 
-    <p>Name <?php echo $result1['fname'] , $result1['lname']?></p>
+    <p>Name <?php echo $result1['fname']?><br><?php echo $result1['lname']?></p>
     <img src="<?php echo $result1['src']?>" alt="Room Photo">
     <p>Room Type <?php echo $result1['room_type']?></p>
     <p>Room Price <?php echo $result1['price']?></p>
