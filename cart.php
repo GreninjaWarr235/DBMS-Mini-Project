@@ -59,9 +59,14 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
             <div class="tamt">
                 <?php echo 'Total Amount: &#8377; '.$diff->format("%a") * $_SESSION['price']; ?>
             </div>
-            <div class="subm"><a><button onclick="call()">Update</button></a><a><button>Cancel</button></a><a
-                    href="transaction.php"><button>Confirm</button></a></div>
-        </div>
+            <div class="subm">
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button onclick="call()" style="background:none; border:none; color: white">Update</button></a></div>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button style="background:none; border:none; color: white">Cancel</button></a></div>
+            <div class="asmButt"><a href="transaction.php"><span></span><span></span><span></span><span></span><button style="background:none; border:none; color: white">Confirm</button></a></div>
+            <!-- <div class="subm"><a><button onclick="call()">Update</button></a><a><button>Cancel</button></a><a
+                    href="transaction.php"><button>Confirm</button></a></div> -->
+                    </div>
+                </div>
     </div>
 </body>
 <script type="text/javascript">
@@ -206,4 +211,97 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
         height: 250px;
         width: 300px;
     }
+
+    .asmButt {
+    display: inline-block;
+}
+
+.asmButt a {
+    position: relative;
+    padding: 8px;
+    padding-top: 4px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.4);
+    background: #0F4C75;
+    letter-spacing: 1px;
+    font-size: 20px;
+}
+
+.asmButt a:hover {
+    color: white;
+}
+
+.asmButt a span {
+    display: block;
+    position: absolute;
+    background: #2894ff;
+}
+
+.asmButt a span:nth-child(1) {
+    left: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.asmButt a:hover span:nth-child(1) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+.asmButt a span:nth-child(2) {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.asmButt a:hover span:nth-child(2) {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.asmButt a span:nth-child(3) {
+    right: 0;
+    bottom: 0;
+    width: 2px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.asmButt a:hover span:nth-child(3) {
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.asmButt a span:nth-child(4) {
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.asmButt a:hover span:nth-child(4) {
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+    transition-delay: 0.5s;
+}
 </style>
