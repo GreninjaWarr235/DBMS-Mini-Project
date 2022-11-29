@@ -23,17 +23,17 @@ session_start();
                     <pre><input type="text" placeholder="Confirmation or Itinerary No." name="confirmno" rows="5"></pre>
                     <pre><input type="text" placeholder="Email Address" name="emailadd" rows="5"></pre>
                     <br>
-                    <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit" style="background:none; border:none; color: white">Find Reservation</button></a></div>
+                    <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit" style="background:none; border:none; color:rgba(255, 255, 255, 0.4);">Find Reservation</button></a></div>
                 </div>
                 <br>
-                <hr>
+                <hr style="border:none; height: 0.08em; background:#06283D;">
                 <p>Don't know your Confirmation Number?</p>
                 <p>Your Confirmation Number was included in an email sent at the time of booking. Please check your
                     email to recover the number.
                 </p>
                 <br>
                 <div class="info">
-                    <div class="asmButt"><a href="#"><span></span><span></span><span></span><span></span>Help</a>
+                    <div class="asmButt" style="font-family:'Lato', sans-serif; "><a href="#"><span></span><span></span><span></span><span></span>Help</a>
                     </div>
                 </div>
             </div>
@@ -44,8 +44,11 @@ session_start();
 </html>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
     body {
     background-color: #f5f5f5;
+    background-image: linear-gradient(267deg, #1746A2, #5F9DF7);
 }
 
 .item {
@@ -94,6 +97,7 @@ session_start();
     padding-bottom: 40px;
     margin-right: 20px;
     margin: 80px;
+    border-radius: 20px;
 }
 
 input {
@@ -113,6 +117,18 @@ p {
     background-color: aqua;
     cursor: pointer;
 }
+
+button {
+        cursor:pointer; 
+        background:none; 
+        border:none; 
+        font-size:16px; 
+        font-family:'Lato', sans-serif; 
+      }
+
+      button:hover {
+        color: white;
+      }
 
 .asmButt {
     display: inline-block;

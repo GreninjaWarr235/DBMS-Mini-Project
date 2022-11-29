@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
                 </div>
                 <div class="col-12">
                     <div class="btn btn-primary mb-3">
-                        <span class="ps-3"><button type="submit" style="background:none; color:white; border:none; font-size:16px;">Pay Rs. <?php
+                        <span class="ps-3"><button type="submit" style="background:none; color:white; border:none; font-size:16px;">Pay &#8377; <?php
     $date1 = date_create($_SESSION['start']);
     $date2 = date_create($_SESSION['end']);
     //difference between two dates

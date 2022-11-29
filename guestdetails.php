@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
 <body>
     <h2>
-        <pre class="guestdetails" style="text-align: center; font-size: 26px;">Guest Details</pre>
+        <pre class="guestdetails" style="text-align: center; font-size: 26px; color: white">Guest Details</pre>
     </h2>
-    <div id="container">
+    <div id="container" style="border-radius: 10px;">
         <form action="guestdetails.php" method="post">
             <div class="item">
                 <span>
@@ -101,7 +101,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
                 </label>
                 <pre><p class="dec"> * All fields mandatory</p></pre>
             </div>
-            <button class="button" type="submit">Submit</button>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
+                  >Book</button></a></div>
         </form>
     </div>
 </body>
@@ -112,8 +113,116 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
     body {
-        background-color: #f5f5f5;
+        background-image: linear-gradient(45deg, #1746A2, #5F9DF7);
     }
+
+    button {
+        cursor:pointer; 
+        background:none; 
+        border:none; 
+        font-size:20px; 
+        font-family:'Lato', sans-serif; 
+        color:rgba(255, 255, 255, 0.4);
+      }
+
+      button:hover {
+        color: white;
+      }
+
+    .asmButt {
+        padding-right: 250px;
+        font-size: 20px;
+        font-family: 'Lato', sans-serif;
+        display: inline-block;
+      }
+      
+      .asmButt a {
+        position: relative;
+        padding: 8px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.4);
+        background: #0F4C75;
+        letter-spacing: 1px;
+        font-size: 20px;
+      }
+      
+      .asmButt a:hover {
+        color: white;
+      }
+      
+      .asmButt a span {
+        display: block;
+        position: absolute;
+        background: #2894ff;
+      }
+      
+      .asmButt a span:nth-child(1) {
+        left: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+      }
+      
+      .asmButt a:hover span:nth-child(1) {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+      }
+      
+      .asmButt a span:nth-child(2) {
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+      }
+      
+      .asmButt a:hover span:nth-child(2) {
+        transform: scalex(1);
+        transform-origin: left;
+        transition: transform 0.5s;
+      }
+      
+      .asmButt a span:nth-child(3) {
+        right: 0;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
+      
+      .asmButt a:hover span:nth-child(3) {
+        transform: scaleY(1);
+        transform-origin: bottom;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
+      
+      .asmButt a span:nth-child(4) {
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 2px;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
+      
+      .asmButt a:hover span:nth-child(4) {
+        transform: scalex(1);
+        transform-origin: left;
+        transition: transform 0.5s;
+        transition-delay: 0.5s;
+      }
 
     #container {
         margin: auto;
