@@ -37,7 +37,7 @@ session_start();
 
 <body>
   <div id="modal" class="modal" style="display:block;">
-  <div class="date">
+    <div class="date">
       <form id="form" action="Rooms.php" method="post">
         <input type="hidden" name="flag" value="0">
         <p style="margin: 0px">Start Date</p>
@@ -49,26 +49,27 @@ session_start();
         <button type="submit">Set</button>
       </form>
     </div>
-</div>
+  </div>
   <?php
-include 'dbconnect.php';
-if ($_SERVER["REQUEST_METHOD"]=="POST"){
-  if ($_POST['flag']=="0") {
-    $_SESSION['start'] = $_POST['start'];
-    $_SESSION['end'] = $_POST['end'];
-    ?>
-  <script type="text/javascript">document.getElementById('modal').style.display = 'none';</script>
+  include 'dbconnect.php';
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_POST['flag'] == "0") {
+      $_SESSION['start'] = $_POST['start'];
+      $_SESSION['end'] = $_POST['end'];
+  ?>
+      <script type="text/javascript">
+        document.getElementById('modal').style.display = 'none';
+      </script>
   <?php
+    }
+    if ($_POST['flag'] == "1") {
+      $_SESSION['type'] = $_POST['type'];
+      $_SESSION['price'] = $_POST['price'];
+      $_SESSION['src'] = $_POST['src'];
+      header("location:guestdetails.php");
+    }
   }
-
-  if ($_POST['flag']=="1") {
-    $_SESSION['type'] = $_POST['type'];
-    $_SESSION['price'] = $_POST['price'];
-    $_SESSION['src'] = $_POST['src'];
-    header("location:guestdetails.php");
-  }
-}
-?>
+  ?>
   <div class="OuterDiv">
     <br>
     <hr class="mainhr">
@@ -103,8 +104,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="hidden" name="type" value="Deluxe Non-A.C">
             <input type="hidden" name="price" value="2000">
             <input type="hidden" name="src" value="deluxe-non-ac-room-500x500 (1).png">
-            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
-                  >Book</button></a></div>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit">Book</button></a></div>
           </form>
         </div>
       </div>
@@ -140,8 +140,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="hidden" name="type" value="Deluxe A.C">
             <input type="hidden" name="price" value="3000">
             <input type="hidden" name="src" value="superior-room-ac1 (1).jpg">
-            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit"
-                  >Book</button></a></div>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit">Book</button></a></div>
           </form>
         </div>
       </div>
@@ -178,8 +177,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="hidden" name="type" value="Executive Suite">
             <input type="hidden" name="price" value="5000">
             <input type="hidden" name="src" value="Executive_Suite.jpg">
-            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
-                  >Book</button></a></div>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit">Book</button></a></div>
           </form>
         </div>
       </div>
@@ -215,8 +213,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="hidden" name="type" value="Honeymoon Suite">
             <input type="hidden" name="price" value="5000">
             <input type="hidden" name="src" value="https://i.pinimg.com/originals/78/74/7f/78747fb2b7cc49a3f3571a1cc0a1f77b.jpg">
-            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
-                  >Book</button></a></div>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit">Book</button></a></div>
           </form>
         </div>
       </div>
@@ -253,8 +250,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
             <input type="hidden" name="type" value="Two Bedroom Villa">
             <input type="hidden" name="price" value="10000">
             <input type="hidden" name="src" value="two bedroom villa.jpg">
-            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button  type="submit"
-                  >Book</button></a></div>
+            <div class="asmButt"><a><span></span><span></span><span></span><span></span><button type="submit">Book</button></a></div>
           </form>
         </div>
       </div>
@@ -277,7 +273,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 </html>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap'); 
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
 
   * {
     margin: 0;
@@ -480,10 +476,10 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   }
 
   .date button {
-    padding: 6px 12px 6px 12px; 
-    color:white; 
-    background-color: #b2cce7; 
-    margin-top: 22px; 
+    padding: 6px 12px 6px 12px;
+    color: white;
+    background-color: #b2cce7;
+    margin-top: 22px;
     border-radius: 15px;
     transition: transform 0.3s;
   }
@@ -632,12 +628,12 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
   }
 
   button {
-    cursor:pointer; 
-    background:none; 
-    border:none; 
-    font-size:20px; 
-    font-family:'Lato', sans-serif; 
-    color:rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    color: rgba(255, 255, 255, 0.4);
   }
 
   button:hover {
